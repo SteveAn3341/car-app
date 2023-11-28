@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ brands.name }}</title>
+    <!-- Include any stylesheets or head content -->
+</head>
+<body>
+    <h1>{{ brands.name }}</h1>
+    <img src="{{ brands.img_url }}" alt="{{ brands.name }}" style="width: 300px; height: auto;">
+    <!-- Include any additional content or links -->
+    {%for car in cars %}
+    <div>
+        <li>
+            <p>Name:{{car.name}}</p>
+            <img src = "{{car.img_url}}" style="width: 300px; height: auto;">
+            <p>Color:{{car.color}}</p>
+            <p>Model:{{car.model}}
+            <p>Year:{{car.year}}
+            <p>Brand_name:{{car.brand_name.name}}
+
+            <p><a href = "{% url 'index' %}">Go back</a></p>
+
+
+
+
+        </li>
+    </div>
+    {%endfor%}
+</body>
+</html>

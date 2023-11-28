@@ -1,0 +1,11 @@
+
+<a href="{% url 'add_car_model' %}">Add Car Model</a>
+
+{%for car in cars%}
+<h1>{{car.brand_name.name}}</h1>
+<h2>{{car.model}}</h2>
+<a href = "{% url 'individual' id=car.id  %}"><img src = "{{car.img_url}}" style="width: 150px; height: auto;"></a>
+<a href="{% url 'delete_car_model' id=car.id %}" onclick="return confirm('Are you sure?');">Delete Car Model</a>
+{%endfor%}
+
+<a href = "{% url 'index' %}">Go back</a>

@@ -1,0 +1,21 @@
+<! DOCTYPE html>
+<html>
+<head>
+
+
+
+<title>Add Car Model</title>
+</head>
+<body>
+
+
+</body>
+<h1>Add Car Model</h1>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Add Car Model</button>
+</form>
+<a href="{% url 'index' %}">Back to Home</a>
+
+</html>

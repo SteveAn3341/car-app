@@ -1,0 +1,15 @@
+{%if cars%}
+<li>
+<p>Name:{{cars.name}}</p>
+<img src = "{{cars.img_url}}" style="width: 300px; height: auto;">
+<p>Color:{{cars.color}}</p>
+<p>Model:{{cars.model}}
+<p>Year:{{cars.year}}
+<p>Brand_name:{{cars.brand_name.name}} 
+</li>
+
+{%else%}
+<p>no cars available</p>
+{%endif%}
+<a href = "{% url 'details'%}">Add New Car</a>
+<a href = "{% url 'index' %}">Go back</a>

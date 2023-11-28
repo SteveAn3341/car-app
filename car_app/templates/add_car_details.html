@@ -1,0 +1,19 @@
+<! DOCTYPE html>
+<html>
+<head>
+
+
+
+<title>Add Car Details</title>
+</head>
+<body>
+  <h1>Add Car Details</h1>
+  <form method='post'>
+    {%csrf_token%}
+    {{form.as_p}}
+    <button type = 'submit'>Add New Car</button>
+
+
+  </form>
+  <a href="{% url 'index' %}">Back to Home</a>
+</bode>

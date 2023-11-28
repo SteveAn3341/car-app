@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Update Brand</title>
+    <!-- Add any additional head content here -->
+</head>
+<body>
+    <h1>Update Brand</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Update Brand</button>
+    </form>
+    <a href="{% url 'index' %}">Back to Home</a>
+</body>
+</html>
